@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ed">
+  <meta name="description" content="Trang giới thiệu Trần Thị Yến Như, chuyên viên Content Marketing, kết hợp lời tri ân thầy cô nhân ngày Nhà giáo Việt Nam 20/11.">
+  <title>Trần Thị Yến Như | Content Marketing &amp; Tri ân 20/11</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #183b43;
+      --muted: #627b7c;
+      --coral: #e77e68;
+      --gold: #e6b95d;
+      --paper: #fffdf8;
+      --font-sans: Arial, "Segoe UI", Tahoma, sans-serif;
+      --font-serif: "Times New Roman", Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100svh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 12% 14%, rgba(255, 222, 187, .72), transparent 34%),
+        radial-gradient(ellipse at 88% 82%, rgba(194, 229, 213, .78), transparent 37%),
+        linear-gradient(135deg, #fff8ed 0%, #fffaf5 48%, #eff7ee 100%);
+      font-family: var(--font-sans);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      position: relative;
+      display: grid;
+      min-height: 100svh;
+      place-items: center;
+      padding: 40px 24px 64px;
+      isolation: isolate;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      width: min(100%, 780px);
+      grid-template-columns: minmax(0, 1fr);
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .ambient {
+      position: absolute;
+      z-index: -1;
+      width: min(78vw, 680px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(255, 255, 255, .72);
+      border-radius: 50%;
+      box-shadow: 0 0 0 36px rgba(255, 255, 255, .14), 0 0 0 78px rgba(255, 255, 255, .12);
+      pointer-events: none;
+    }
+
+    .ambient::before,
+    .ambient::after {
+      position: absolute;
+      color: rgba(215, 143, 111, .42);
+      content: "✿";
+      font-size: clamp(24px, 5vw, 52px);
+    }
+
+    .ambient::before {
+      top: 14%;
+      left: 10%;
+      transform: rotate(-18deg);
+    }
+
+    .ambient::after {
+      right: 8%;
+      bottom: 17%;
+      color: rgba(205, 166, 82, .5);
+      font-size: clamp(20px, 4vw, 42px);
+      transform: rotate(20deg);
+    }
+
+    .card {
+      width: 100%;
+      padding: clamp(32px, 7vw, 68px) clamp(22px, 7vw, 72px);
+      border: 1px solid rgba(255, 255, 255, .9);
+      border-radius: 30px;
+      background: rgba(255, 253, 248, .78);
+      box-shadow: 0 24px 80px rgba(64, 91, 77, .12), inset 0 1px 0 #fff;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .greeting-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-card {
+      padding: clamp(26px, 4vw, 40px);
+      text-align: left;
+    }
+
+    .profile-card .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .profile-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .avatar {
+      display: grid;
+      width: 62px;
+      height: 62px;
+      flex: 0 0 62px;
+      place-items: center;
+      border: 1px solid rgba(211, 165, 92, .48);
+      border-radius: 50%;
+      color: #a56d50;
+      background: linear-gradient(145deg, #fff4dc, #f8ded5);
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+    }
+
+    .profile-name {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-weight: 500;
+      letter-spacing: -.035em;
+      line-height: 1.2;
+    }
+
+    .profile-role {
+      margin: 6px 0 0;
+      color: #a56d50;
+      font-size: .92rem;
+      font-weight: 650;
+    }
+
+    .experience {
+      display: inline-flex;
+      margin: 20px 0 0;
+      padding: 7px 12px;
+      border: 1px solid rgba(35, 91, 81, .14);
+      border-radius: 999px;
+      color: #285d55;
+      background: rgba(235, 246, 238, .8);
+      font-size: .8rem;
+      font-weight: 650;
+    }
+
+    .profile-intro {
+      margin: 18px 0 0;
+      color: #4f6968;
+      font-size: .94rem;
+      line-height: 1.75;
+    }
+
+    .profile-section {
+      margin-top: 21px;
+    }
+
+    .profile-section h3 {
+      margin: 0 0 11px;
+      color: #315a52;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 7px 10px;
+      border: 1px solid rgba(191, 139, 69, .2);
+      border-radius: 999px;
+      color: #695b48;
+      background: rgba(255, 247, 232, .8);
+      font-size: .78rem;
+    }
+
+    .profile-values {
+      margin: 0;
+      color: #627b7c;
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+
+    .profile-goal {
+      margin: 17px 0 0;
+      padding: 13px 15px;
+      border-left: 2px solid #dfa86f;
+      border-radius: 0 10px 10px 0;
+      color: #4f6968;
+      background: rgba(255, 247, 232, .7);
+      font-family: var(--font-serif);
+      font-size: .9rem;
+      line-height: 1.65;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: #a56d50;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      width: 22px;
+      height: 1px;
+      background: #d7ad79;
+      content: "";
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 8vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: 1.05;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 8px;
+      color: var(--coral);
+      font-size: .64em;
+      font-style: italic;
+      letter-spacing: -.035em;
+    }
+
+    .ornament {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      margin: 28px auto 18px;
+      place-items: center;
+      border: 1px solid rgba(211, 165, 92, .48);
+      border-radius: 50%;
+      color: #bf8b45;
+      font-size: 20px;
+    }
+
+    .message {
+      max-width: 490px;
+      margin: 0 auto;
+      color: #4f6968;
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2.8vw, 1.28rem);
+      line-height: 1.8;
+    }
+
+    .signature {
+      margin: 18px 0 0;
+      color: #a1745a;
+      font-size: .9rem;
+      letter-spacing: .04em;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .music-button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 19px;
+      border: 1px solid rgba(35, 91, 81, .2);
+      border-radius: 999px;
+      color: #285d55;
+      background: rgba(255, 255, 255, .75);
+      cursor: pointer;
+      font-size: .9rem;
+      font-weight: 650;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .music-button:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      box-shadow: 0 7px 20px rgba(43, 87, 72, .12);
+    }
+
+    .music-button:focus-visible {
+      outline: 3px solid rgba(231, 126, 104, .55);
+      outline-offset: 3px;
+    }
+
+    .music-icon {
+      font-size: 1.1rem;
+    }
+
+    .hint {
+      position: absolute;
+      right: 16px;
+      bottom: max(16px, env(safe-area-inset-bottom));
+      left: 16px;
+      margin: 0;
+      color: rgba(44, 80, 72, .72);
+      font-size: .78rem;
+      text-align: center;
+    }
+
+    .bubble {
+      position: fixed;
+      z-index: 3;
+      top: -70px;
+      display: grid;
+      padding: 0;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .74);
+      background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, .92), var(--bubble-color) 76%);
+      box-shadow: inset -4px -6px 12px rgba(65, 75, 65, .08), 0 4px 14px rgba(93, 103, 91, .08);
+      cursor: pointer;
+      opacity: var(--bubble-opacity);
+      animation: fall var(--fall-duration) linear forwards;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .bubble.circle {
+      border-radius: 50%;
+    }
+
+    .bubble.square {
+      border-radius: 9px;
+      transform: rotate(18deg);
+    }
+
+    .bubble.heart,
+    .bubble.star {
+      border: 0;
+      background: none;
+      box-shadow: none;
+      font-size: calc(var(--bubble-size) * .92);
+      line-height: 1;
+      text-shadow: 0 3px 12px rgba(100, 79, 70, .12);
+    }
+
+    .bubble:focus-visible {
+      outline: 2px solid rgba(24, 59, 67, .7);
+      outline-offset: 4px;
+    }
+
+    @keyframes fall {
+      from {
+        transform: translate3d(0, -5vh, 0) rotate(0deg);
+      }
+
+      to {
+        transform: translate3d(var(--sway), calc(100vh + 100px), 0) rotate(330deg);
+      }
+    }
+
+    .particle {
+      position: fixed;
+      z-index: 5;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--particle-color);
+      pointer-events: none;
+      animation: burst 650ms cubic-bezier(.15, .65, .35, 1) forwards;
+    }
+
+    @keyframes burst {
+      to {
+        opacity: 0;
+        transform: translate(var(--dx), var(--dy)) scale(.15);
+      }
+    }
+
+    .wish {
+      position: fixed;
+      z-index: 6;
+      width: min(82vw, 450px);
+      color: #28574f;
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 3.8vw, 1.55rem);
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      text-shadow: 0 2px 16px rgba(255, 255, 255, .95);
+      pointer-events: none;
+      animation: wish-float 2.6s ease-out forwards;
+    }
+
+    @keyframes wish-float {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 12px) scale(.96);
+      }
+
+      12% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+      }
+
+      72% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -68px) scale(1.02);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 22px 16px 58px;
+      }
+
+      .card {
+        border-radius: 24px;
+      }
+
+      .profile-card {
+        padding: 26px 22px;
+      }
+
+      .hint {
+        font-size: .72rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-content {
+        max-width: 580px;
+        gap: 16px;
+      }
+
+      .greeting-card {
+        padding: 34px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+      }
+
+      .bubble {
+        animation-duration: 18s !important;
+      }
+
+      .particle,
+      .wish {
+        animation-duration: 1.2s !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="page-content">
+      <section class="card profile-card" aria-labelledby="profile-name">
+        <p class="eyebrow">Hồ sơ cá nhân</p>
+        <div class="profile-heading">
+          <div class="avatar" aria-hidden="true">YN</div>
+          <div>
+            <h2 class="profile-name" id="profile-name">Trần Thị Yến Như</h2>
+            <p class="profile-role">Content Marketing</p>
+          </div>
+        </div>
+        <p class="experience">01 năm kinh nghiệm Content Marketing</p>
+        <p class="profile-intro">
+          Tôi có kinh nghiệm xây dựng nội dung và triển khai các hoạt động truyền thông. Tôi có thế
+          mạnh lên ý tưởng chiến dịch, lập kế hoạch, phân công công việc; phối hợp tốt với đội nhóm,
+          chủ động giải quyết vấn đề và theo dõi hiệu suất để cải thiện kết quả.
+        </p>
+        <div class="profile-section">
+          <h3>Thế mạnh</h3>
+          <ul class="skill-list">
+            <li>Chiến dịch &amp; kế hoạch</li>
+            <li>Phân công công việc</li>
+            <li>Giải quyết vấn đề</li>
+            <li>Thuyết trình</li>
+            <li>Làm việc nhóm</li>
+            <li>Theo dõi hiệu suất</li>
+          </ul>
+        </div>
+        <div class="profile-section">
+          <h3>Sở thích &amp; giá trị</h3>
+          <p class="profile-values">Yêu thích đọc sách · Đam mê nghiên cứu khoa học · Luôn sẵn sàng học hỏi điều mới</p>
+        </div>
+        <p class="profile-goal">
+          Mong muốn phát triển chuyên môn, tạo ra nội dung có giá trị và đóng góp tích cực vào
+          mục tiêu chung của mỗi dự án.
+        </p>
+      </section>
+      <section class="card greeting-card" aria-labelledby="page-title">
+        <p class="eyebrow">Ngày Nhà giáo Việt Nam</p>
+        <h1 id="page-title">Tri ân <span>người gieo nắng</span></h1>
+        <div class="ornament" aria-hidden="true">✿</div>
+        <p class="message">
+          Cảm ơn thầy cô đã kiên nhẫn dìu dắt, trao tri thức và thắp lên trong chúng em
+          niềm tin để vững bước trên hành trình trưởng thành.
+        </p>
+        <p class="signature">Kính chúc thầy cô một ngày 20/11 thật ấm áp và nhiều niềm vui</p>
+        <div class="controls">
+          <button class="music-button" id="music-toggle" type="button" aria-pressed="false">
+            <span class="music-icon" aria-hidden="true">♫</span>
+            <span id="music-label">Bật nhạc dịu dàng</span>
+          </button>
+        </div>
+      </section>
+    </div>
+    <p class="hint">Chạm vào những bong bóng để mở lời chúc yêu thương</p>
+  </main>
+
+  <script>
+    (() => {
+      const wishes = [
+        "Chúc thầy cô luôn mạnh khỏe, hạnh phúc và giữ mãi ngọn lửa đam mê!",
+        "Cảm ơn thầy cô đã chắp cánh ước mơ và dẫn lối chúng em đến tương lai.",
+        "Kính chúc người lái đò luôn bình an, vui khỏe trên mọi chuyến đò tri thức.",
+        "Mong mỗi ngày đến lớp của thầy cô đều ngập tràn niềm vui và tiếng cười.",
+        "Chúc thầy cô luôn được yêu thương như cách thầy cô đã yêu thương học trò.",
+        "Tri thức thầy cô trao hôm nay sẽ là ánh sáng theo chúng em suốt cuộc đời.",
+        "Kính chúc thầy cô một mùa hiến chương ấm áp, trọn vẹn và thật nhiều tự hào."
+      ];
+
+      const colors = ["#f4b7a5", "#f5d28b", "#abd8c7", "#c5bee7", "#f2a9b5", "#a9d8e8"];
+      const shapes = ["circle", "heart", "star", "square"];
+      const bubbleLayerLimit = 42;
+      const musicButton = document.querySelector("#music-toggle");
+      const musicLabel = document.querySelector("#music-label");
+      let audioContext;
+      let musicTimer;
+      let noteIndex = 0;
+      let previousWish = -1;
+
+      // Tạo một giai điệu nền nhẹ bằng Web Audio, không cần tải tệp nhạc ngoài.
+      function ensureAudioContext() {
+        if (!audioContext) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) {
+            throw new Error("Trình duyệt này chưa hỗ trợ phát âm thanh Web Audio.");
+          }
+          audioContext = new AudioContextClass();
+        }
+        return audioContext;
+      }
+
+      function playNote(frequency, startTime, duration, volume) {
+        const oscillator = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(frequency, startTime);
+        gain.gain.setValueAtTime(0.0001, startTime);
+        gain.gain.exponentialRampToValueAtTime(volume, startTime + 0.035);
+        gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+        oscillator.connect(gain);
+        gain.connect(audioContext.destination);
+        oscillator.start(startTime);
+        oscillator.stop(startTime + duration + 0.02);
+      }
+
+      function scheduleMusic() {
+        const melody = [392, 440, 523.25, 440, 349.23, 392, 440, 392, 329.63, 392, 440, 523.25];
+        const now = audioContext.currentTime;
+        const frequency = melody[noteIndex % melody.length];
+        playNote(frequency, now, 0.85, 0.035);
+        if (noteIndex % 4 === 0) {
+          const chords = [196, 174.61, 220];
+          playNote(chords[Math.floor(noteIndex / 4) % chords.length], now, 1.3, 0.018);
+        }
+        noteIndex += 1;
+        musicTimer = window.setTimeout(scheduleMusic, 620);
+      }
+
+      function setMusicEnabled(enabled) {
+        if (enabled) {
+          try {
+            ensureAudioContext().resume().then(() => {
+              if (!musicTimer) scheduleMusic();
+            }).catch((error) => {
+              console.error("Không thể khởi động nhạc nền:", error);
+              musicLabel.textContent = "Không thể phát nhạc";
+              musicButton.setAttribute("aria-pressed", "false");
+            });
+            musicLabel.textContent = "Tắt nhạc nền";
+            musicButton.setAttribute("aria-pressed", "true");
+          } catch (error) {
+            console.error("Không thể khởi động nhạc nền:", error);
+            musicLabel.textContent = "Trình duyệt không hỗ trợ âm thanh";
+          }
+        } else {
+          window.clearTimeout(musicTimer);
+          musicTimer = undefined;
+          if (audioContext) audioContext.suspend();
+          musicLabel.textContent = "Bật nhạc dịu dàng";
+          musicButton.setAttribute("aria-pressed", "false");
+        }
+      }
+
+      function playPop() {
+        try {
+          const context = ensureAudioContext();
+          const play = () => {
+            const oscillator = context.createOscillator();
+            const gain = context.createGain();
+            const now = context.currentTime;
+            oscillator.type = "sine";
+            oscillator.frequency.setValueAtTime(700, now);
+            oscillator.frequency.exponentialRampToValueAtTime(180, now + 0.11);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+            oscillator.connect(gain);
+            gain.connect(context.destination);
+            oscillator.start(now);
+            oscillator.stop(now + 0.13);
+          };
+
+          if (context.state === "suspended") {
+            context.resume().then(play).catch((error) => {
+              console.error("Không thể phát âm thanh bong bóng:", error);
+            });
+          } else {
+            play();
+          }
+        } catch (error) {
+          console.error("Không thể phát âm thanh bong bóng:", error);
+        }
+      }
+
+      function showWish(x, y) {
+        let nextWish = Math.floor(Math.random() * wishes.length);
+        if (wishes.length > 1 && nextWish === previousWish) {
+          nextWish = (nextWish + 1) % wishes.length;
+        }
+        previousWish = nextWish;
+
+        const wish = document.createElement("div");
+        wish.className = "wish";
+        wish.setAttribute("role", "status");
+        wish.textContent = wishes[nextWish];
+        wish.style.left = `${Math.max(10, Math.min(x, window.innerWidth - 10))}px`;
+        wish.style.top = `${Math.max(80, Math.min(y, window.innerHeight - 100))}px`;
+        document.body.append(wish);
+        wish.addEventListener("animationend", () => wish.remove(), { once: true });
+      }
+
+      function burst(x, y, color) {
+        const particleCount = 12;
+        for (let i = 0; i < particleCount; i += 1) {
+          const angle = (Math.PI * 2 * i) / particleCount + Math.random() * 0.28;
+          const distance = 28 + Math.random() * 42;
+          const particle = document.createElement("span");
+          particle.className = "particle";
+          particle.style.left = `${x - 4}px`;
+          particle.style.top = `${y - 4}px`;
+          particle.style.setProperty("--particle-color", color);
+          particle.style.setProperty("--dx", `${Math.cos(angle) * distance}px`);
+          particle.style.setProperty("--dy", `${Math.sin(angle) * distance}px`);
+          document.body.append(particle);
+          particle.addEventListener("animationend", () => particle.remove(), { once: true });
+        }
+      }
+
+      function popBubble(bubble) {
+        if (bubble.dataset.popped === "true") return;
+        bubble.dataset.popped = "true";
+        const bounds = bubble.getBoundingClientRect();
+        const x = bounds.left + bounds.width / 2;
+        const y = bounds.top + bounds.height / 2;
+        burst(x, y, bubble.dataset.color);
+        showWish(x, y);
+        playPop();
+        bubble.remove();
+      }
+
+      function createBubble() {
+        if (document.querySelectorAll(".bubble").length >= bubbleLayerLimit) return;
+
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const size = 28 + Math.random() * 40;
+        const bubble = document.createElement("button");
+        bubble.className = `bubble ${shape}`;
+        bubble.type = "button";
+        bubble.setAttribute("aria-label", "Mở lời chúc 20 tháng 11");
+        bubble.style.left = `${Math.random() * 94 + 3}vw`;
+        bubble.style.width = `${size}px`;
+        bubble.style.height = `${size}px`;
+        bubble.style.setProperty("--bubble-size", `${size}px`);
+        bubble.style.setProperty("--bubble-color", color);
+        bubble.style.setProperty("--bubble-opacity", `${0.48 + Math.random() * 0.35}`);
+        bubble.style.setProperty("--fall-duration", `${7 + Math.random() * 7}s`);
+        bubble.style.setProperty("--sway", `${Math.round(Math.random() * 150 - 75)}px`);
+        bubble.dataset.color = color;
+
+        if (shape === "heart") {
+          bubble.textContent = "♥";
+          bubble.style.color = color;
+        } else if (shape === "star") {
+          bubble.textContent = "★";
+          bubble.style.color = color;
+        }
+
+        bubble.addEventListener("click", () => popBubble(bubble));
+        bubble.addEventListener("animationend", (event) => {
+          if (event.animationName === "fall") bubble.remove();
+        });
+        document.body.append(bubble);
+      }
+
+      musicButton.addEventListener("click", () => {
+        const isEnabled = musicButton.getAttribute("aria-pressed") === "true";
+        setMusicEnabled(!isEnabled);
+      });
+
+      createBubble();
+      window.setInterval(createBubble, 430);
+    })();
+  </script>
+</body>
+</html>
